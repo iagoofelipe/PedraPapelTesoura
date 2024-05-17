@@ -30,6 +30,10 @@ void Game::startGame() {
         play_player1 = player1->requireNewPlay();
         play_player2 = player2->requireNewPlay();
 
+        if(play_player1 == -1 || play_player2 == -1) {
+            continue;
+        }
+
         std::cout 
             << player1->name << " vs " << player2->name << std::endl
             << "\nJogada " << player1->name << ": " << getPlayName(play_player1) << std::endl
